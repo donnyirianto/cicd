@@ -1,4 +1,4 @@
-name: cd
+name: ci-test
 
 on:
   push:
@@ -23,10 +23,7 @@ jobs:
           check-latest: true
 
       - name: Install dependencies 👨🏻‍💻
-        run: yarn
-
-      - name: Run linter 👀
-        run: yarn lint
+        run: pnpm i
 
       - name: Run tests 🧪
-        run: yarn test
+        run: pnpm test
