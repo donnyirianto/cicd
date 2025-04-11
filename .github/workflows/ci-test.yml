@@ -22,8 +22,11 @@ jobs:
           node-version: 22.11.0
           check-latest: true
 
+      - name: Install pnpm 📦
+        run: npm install -g pnpm
+
       - name: Install dependencies 👨🏻‍💻
-        run: pnpm i
+        run: pnpm install
 
       - name: Run tests 🧪
         run: pnpm test
